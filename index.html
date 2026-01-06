@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CherubTV - Film & Dizi Keşfet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+    <header class="header">
+        <button id="themeToggle" class="action-btn">☾ / ☀︎ Tema</button>
+        <h1>CherubTV</h1>
+        <p class="header-sub">dizi · film · keşfet · öğren</p>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#" id="nav-home">Anasayfa</a></li>
+                <li><a href="#" class="genre-link" data-genre="Romance">Romantik</a></li>
+                <li><a href="#" class="genre-link" data-genre="Comedy">Komedi</a></li>
+                <li><a href="#" class="genre-link" data-genre="Drama">Dram</a></li>
+                <li><a href="#" class="genre-link" data-genre="Thriller">Gerilim</a></li>
+                <li><a href="#" class="genre-link" data-genre="Science-Fiction">Bilimkurgu</a></li>
+            </ul>
+        </nav>
+
+        <div class="controls">
+            <button id="showFavorites" class="action-btn"> Favorilerim</button>
+            <select id="sortOrder">
+                <option value="default">Sıralama</option>
+                <option value="az">A'dan Z'ye</option>
+                <option value="za">Z'den A'ya</option>
+            </select>
+            <input type="text" id="searchInput" placeholder="Film veya dizi ara...">
+            <button id="searchBtn" class="search-trigger">Ara</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="status" class="status-msg"></div>
+        
+        <section id="cards" class="movie-grid"></section>
+
+        <div id="loadMoreArea" class="expand-bar">
+            <span>... Devamını göremk için tıklayınız ...</span>
+        </div>
+
+        <div id="modal" class="modal hidden"></div>
+
+        <section id="about" class="about">
+            <h2>Hakkımızda</h2>
+            <p>CherubTV, TVMaze API kullanarak yapılmış olan bir nevi bir film kataloğudur.
+                 Bu platformda sevdiğiniz, keşfetmek isteyeceğiniz dizi ve filmelri rahatlıla bulabilirsinişz</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 CherubTV | Dönem Sonu Projesi</p>
+        <p>İletişim: silaakyvz@gmail.com</p>
+        <p>İletişim:2505903027@gmail.com </p>
+        <p>Görüş ve önerileriniz bizim için çok değerlidir. Lütfen bir sorun görürseniz bizimle iletişime geçmekten çekinmeyiniz. </p>
+        
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

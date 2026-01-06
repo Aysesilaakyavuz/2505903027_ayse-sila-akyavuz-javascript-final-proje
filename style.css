@@ -1,0 +1,150 @@
+:root {
+    --primary: #7a0000;
+    --bg: #0d0d0d;
+    --card: #1a1a1a;
+    --text: #ffffff;
+    --accent: #ff0000;
+    --border: #333;
+}
+
+body.light {
+    --bg: #f4f4f4;
+    --text: #1a1a1a;
+    --card: #ffffff;
+    --border: #ccc;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body { background-color: var(--bg); color: var(--text); transition: 0.3s; overflow-x: hidden; }
+
+/* Header Tasarımı */
+.header {
+    background: linear-gradient(to bottom, #4a0000, var(--primary));
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+}
+
+.header h1 { font-size: 3.5rem; letter-spacing: 2px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+.header-sub { font-size: 1.1rem; opacity: 0.8; margin-bottom: 25px; font-style: italic; }
+
+/* Navbar & Butonlar */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.navbar a, .action-btn {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50px;
+    background: rgba(0,0,0,0.3);
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.navbar a:hover, .action-btn:hover { background: white; color: var(--primary); transform: translateY(-3px); }
+
+.fav-btn-active { background: #e91e63 !important; border-color: #e91e63 !important; }
+
+/* Kontroller */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    background: rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+input { padding: 12px 20px; border-radius: 25px; border: none; width: 250px; outline: none; background: #fff; color: #000; }
+select { padding: 12px; border-radius: 25px; border: none; cursor: pointer; }
+.search-trigger { padding: 12px 25px; background: #000; color: #fff; border: none; cursor: pointer; border-radius: 25px; font-weight: bold; }
+
+/* Film Grid */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+    padding: 50px 8%;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s;
+    border: 1px solid var(--border);
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 15px 30px rgba(255,0,0,0.2); }
+.card img { width: 100%; height: 350px; object-fit: cover; cursor: pointer; }
+.card-info { padding: 20px; text-align: center; }
+.card h3 { font-size: 1.2rem; margin-bottom: 15px; height: 3rem; overflow: hidden; }
+
+.fav-add-btn {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.fav-add-btn:hover { background: var(--accent); color: #fff; }
+
+/* Expand Bar */
+.expand-bar {
+    width: 80%;
+    margin: 20px auto 50px;
+    padding: 25px;
+    border: 2px dashed var(--primary);
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.expand-bar:hover { background: var(--primary); color: white; }
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.95);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 1000; padding: 20px;
+}
+.modal-content {
+    background: var(--card);
+    padding: 40px;
+    display: flex;
+    max-width: 900px;
+    gap: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--primary);
+    flex-wrap: wrap;
+}
+.modal-content img { width: 300px; border-radius: 10px; }
+.hidden { display: none; }
+
+.status-msg { text-align: center; padding: 20px; font-weight: bold; color: var(--primary); }
+.footer { padding: 40px; text-align: center; background: #050505; border-top: 5px solid var(--primary); }
